@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
-    <title>Recherche d'articles de news</title>
+    <title>Portfolio</title>
     <meta charset="utf-8" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon-js.ico" />
     <link rel="stylesheet" href="styles.css" />
@@ -9,110 +9,13 @@
 
   <body>
     <header>
-      <h1>Recherche d'articles de news</h1>
+      <h1>Portfolio Esteban ELIAS PUEYO</h1>
 
       <p id="explication">
-        Cette page permet de rechercher des articles via l'API publique
-        de <a href="https://newsdata.io/" target="_blank">NewsData.io</a>.<br/></br>
-        Saisir un sujet qui vous intéresse, une phrase, une passion ou alors simplement des mots-clés.
+        Ce site web est le portfolio de Esteban ELIAS PUEYO
       </p>
     </header>
-    <hr />
 
-    <section id="filter">
-      <div>
-        <p>Les mots que vous ne voulez pas dans votre recherche : </p>
-        <input type="text" placeholder="Mots à exclure espacés (ex: eau arbre politique)" id="motsaenlever"/>
-      </div>
-      <div>
-        <p>Choisir la localisation</p>
-        <select id="langue">
-          <option>fr</option>
-          <option>en</option>
-          <option>it</option>
-          <option>be</option>
-          <option>at</option>
-          <option>dk</option>
-          <option>gr</option>
-          <option>nl</option>
-          <option>ro</option>
-          <option>it</option>
-          <option>it</option>
-        </select>
-      </div>
-
-    </section>
-
-    <hr>
-
-    <main id="conteneur">
-      <!-- Section de recherche (avec résultats) -->
-      <section id="section-recherche">
-        <div id="bloc-recherche">
-          <!-- Champ de recherche -->
-          <input type="text" placeholder="Que cherchez-vous ?" id="recherche"/>
-
-          <!-- Boutons -->
-          <button
-            id="btn-lancer-recherche"
-            type="button"
-            class="btn_clicable"
-            title="Lancer la recherche"
-          >
-            <!-- Icone Loupe (provenant de flaticon.com) -->
-            <img src="images/loupe.svg" alt="Loupe pour recherche" width="22" />
-          </button>
-
-          <button
-            id="btn-favoris"
-            type="button"
-            disabled
-            title="Ajouter la recherche aux favoris"
-          >
-            <!-- Icone étoile vide
-							(qui indique que la recherche ne fait pas partie des favoris) -->
-            <img src="images/etoile-vide.svg" alt="Etoile vide" width="22" />
-
-            <!-- Icone étoile pleine
-								(qui indique que la recherche fait partie des favoris) -->
-            <!-- <img src="images/etoile-pleine.svg" alt="Etoile pleine" width="22" > -->
-
-            <!-- (Les 2 icones d'étoile provenant de flaticon.com) -->
-          </button>
-        </div>
-
-        <!-- Résultats de recherche -->
-        <div id="bloc-gif-attente">
-          <img
-            src="images/attente-ajax.gif"
-            alt="GIF Attente de résultats"
-            width="50"
-          />
-        </div>
-        <div id="bloc-resultats">
-          <h4>Les résultats seront limités à 9.</h4>
-          <p class="info-vide" >(Aucun résultat trouvé)</p>
-        </div>
-      </section>
-
-      <!-- Section de séparation (avec la bordure verte) -->
-      <section id="section-separation"></section>
-
-      <!-- Section des recherches favorites -->
-      <section id="section-favoris">
-        <h2>Recherches favorites</h2>
-        <p>
-          Cliquer sur une recherche favorite ci-dessus pour relancer celle-ci :
-        </p>
-        <ul id="liste-favoris">
-        </ul>
-        <p class="info-vide">(Aucune recherche favorite)</p>
-      </section>
-    </main>
-    <!-- Inclusions des scripts JS -->
-    <script src="js/view.js"></script>
-    <script src="js/research.js"></script>
-    <script src="js/controller.js"></script>
-    <script src="js/News.js"></script>
+    <script src="js/BaseJS.js"></script>
   </body>
 </html>
