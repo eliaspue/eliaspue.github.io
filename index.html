@@ -1,21 +1,66 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
-  <head>
-    <title>Portfolio</title>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon-js.ico" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-
-  <body>
-    <header>
-      <h1>Portfolio Esteban ELIAS PUEYO</h1>
-
-      <p id="explication">
-        Ce site web est le portfolio de Esteban ELIAS PUEYO
-      </p>
-    </header>
-
-    <script src="js/BaseJS.js"></script>
-  </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <nav class="sidebar">
+        <div class="logo">
+            <img src="images/Portrait_Esteban.jpg" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets-professionnels.html">Projets Professionnels</a></li>
+            <li><a href="projets-academiques.html">Projets Académiques</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#"><img src="email-icon.png" alt="Email"></a>
+            <a href="#"><img src="github-icon.png" alt="GitHub"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        </div>
+    </nav>
+    <main>
+        <section id="about">
+            <h1>Bienvenue</h1>
+            <p>Mon nom est Esteban ELIAS PUEYO, je suis développeur basé à Grenoble.</p>
+        </section>
+        <section id="skills">
+            <h1>Mes Compétences</h1>
+            <p>JavaScript</p>
+            <p>Angular</p>
+            <p>HTML/CSS</p>
+            <p>PostgreSQL</p>
+            <p>Java</p>
+            <p>Symfony</p>
+        </section>
+        <section id="cv">
+            <h1>Mon CV</h1>
+            <p><!-- Ajoutez ici le contenu de votre CV --></p>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+</div>
+<script src="scripts.js"></script>
+</body>
 </html>

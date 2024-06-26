@@ -1,215 +1,204 @@
-/* Importation de la police Roboto */
-@import url(https://fonts.googleapis.com/css?family=Roboto);
-
-/* Définition des principales couleurs */
-:root {
-  --text-color: #fafafa; /* (Texte presque blanc) */
-  --background: #202020; /* (Fond gris foncé) */
-  --background-button: #bebebe;
-  --main-green: rgb(26, 188, 156);
-  --active-green: rgb(20, 156, 128);
-  --almost-black: #2d2d2d;
-}
-
-* {
-  color: var(--text-color);
-}
-
 body {
-  background-color: var(--background);
-  font: 14pt Roboto, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  width: 90%;
-  margin: 40px auto;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    display: flex;
 }
 
-/* Paragraphes "Aucun résultat..." et "Aucune recherche..." */
-p.info-vide {
-  font-style: italic;
-  display: none;
+.container {
+    display: flex;
+    width: 100%;
 }
 
-/* Partie En-tête */
+.sidebar {
+    width: 250px;
+    background-color: #1F1F1F;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #333333;
+}
+
+.sidebar .social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sidebar .social-icons a {
+    margin: 0 10px;
+}
+
+.sidebar .social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+main {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
 h1 {
-  text-align: center;
-  font-variant: small-caps;
-  font-size: 2.5em;
-  color: var(--main-green);
+    color: #BB86FC;
+    margin-bottom: 20px;
 }
 
-#explication {
-  font-size: 1.2em;
+p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-#langue {
-  color: black;
-  font-size: 1em;
+/* Styles des cartes */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Conteneur principal */
-#conteneur {
-  display: flex;
-  flex: 1;
-  margin: 30px auto;
+.card {
+    background-color: transparent;
+    width: calc(80% - 10px); /* Largeur calculée pour chaque carte */
+    perspective: 2000px;
+    height: 30vh; /* Limite la hauteur des cartes à 30% de la hauteur de la fenêtre */
+    margin-bottom: 30%; /* Espacement en bas de chaque carte */
 }
 
-/* Section Recherche (avec résultats) */
-#section-recherche {
-  margin-top: 0;
-  flex: 1 1 auto;
+.card-inner {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+
 }
 
-#filter {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 40px;
-  margin-top: 40px;
+.card:hover .card-inner,
+.card-inner.flipped {
+    transform: rotateY(180deg);
 }
 
-#filter div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#filter input {
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 1em;
-  color: var(--almost-black);
-  width: 600px;
-  height: 40px;
-  border-radius: 10px;
-  border: 1px solid #0082b0;
+.card-front {
+    background-color: #1F1F1F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#filter p {
-  font-size: 22px;
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pour ajuster l'image à la taille de la carte */
+    border-radius: 8px; /* Ajouter un arrondi pour correspondre aux coins de la carte */
 }
 
-#bloc-recherche {
-  display: flex;
-  margin: 0 auto;
-  min-width: 450px;
-  flex-direction: row;
+.card-back {
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-#bloc-recherche > input[type="text"],
-#bloc-recherche > button {
-  display: block;
-  font-size: 1.2em;
+.card-back h2 {
+    margin-top: 0;
+    color: #BB86FC;
 }
 
-#bloc-recherche > input[type="text"] {
-  color: var(--almost-black);
-  flex: 1;
-  padding: 0.7em;
-  border: 0.3em solid var(--main-green);
+.card-back p {
+    font-size: 16px;
+    line-height: 1.4;
 }
 
-#btn-favoris:hover {
-  border-color: white;
+
+/* Formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-#bloc-recherche > button {
-  padding: 0.8em 0.8em;
-  /* Bordure invisible pour que le hover ne bouge pas le bouton */
-  border: 1px solid var(--main-green);
-
-  /* Par défaut, les boutons sont en gris
-	 (S'ils sont "clicables", ils passent en vert) */
-  background-color: var(--background-button);
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Apparences des boutons clicables */
-#bloc-recherche > button.btn_clicable {
-  background-color: var(--main-green);
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.croix-favoris {
-  margin-left: 5px;
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #FFFFFF;
 }
 
-#bloc-recherche > button:focus {
-  /* Pour éviter un affichage disgracieux
-		quand le bouton reste en focus */
-  outline: 0 !important;
+button[type="submit"] {
+    padding: 15px;
+    background-color: #BB86FC;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#bloc-recherche > button.btn_clicable:hover {
-  cursor: pointer;
-  border: 1px solid white;
-}
-
-#bloc-recherche > button.btn_clicable:active {
-  background-color: var(--active-green);
-}
-
-/* GIF de chargement (caché par défaut) */
-#bloc-gif-attente {
-  visibility : collapse;
-  margin: 40px;
-  text-align: center;
-}
-
-#bloc-resultats ul.res::before {
-  /* Affichage d'une flèche devant chaque résultat
-		(Cf. https://unicode-table.com/fr/21E8/ ) */
-  content: "\21E8\00A0";
-}
-
-#bloc-resultats h4 {
-  margin-bottom: 40px;
-}
-
-/* Section de la barre de séparation */
-#section-separation {
-  border-left: 2px dashed var(--main-green);
-  margin: 0 20px;
-}
-
-/* Section des recherches favorites */
-#section-favoris {
-  flex: 0 0 300px;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-#section-favoris h2 {
-  margin-top: 0;
-}
-
-#section-favoris p {
-  margin-bottom: 8px;
-}
-
-#liste-favoris li {
-  margin-bottom: 8px;
-  cursor: pointer;
-}
-
-#liste-favoris li span {
-  text-decoration: underline;
-}
-
-#liste-favoris li span:hover {
-  color: var(--main-green);
-}
-
-/* Media-query pour gérer l'affichage sur petit écran */
-@media (max-width: 900px) {
-  #conteneur {
-    flex-direction: column-reverse;
-  }
-
-  #section-separation {
-    border-top: 2px dashed var(--main-green);
-    margin: 0 -10px 40px -10px;
-  }
-
-  #section-favoris {
-    flex: 0;
-  }
+button[type="submit"]:hover {
+    background-color: #9B6FCB;
 }
