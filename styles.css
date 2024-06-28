@@ -22,6 +22,13 @@ body {
     justify-content: space-between;
 }
 
+.sidebar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
 .sidebar .logo img {
     width: 100px;
     height: 100px;
@@ -53,17 +60,17 @@ body {
 
 .sidebar .social-icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 20px;
 }
 
 .sidebar .social-icons a {
-    margin: 0 10px;
+    margin: 0 10px 20px;
 }
 
 .sidebar .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
 }
 
 main {
@@ -201,4 +208,57 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #9B6FCB;
+}
+
+/* Styles pour la section "about" */
+#about h1 {
+    color: #BB86FC;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+/* Styles pour la section "skills" */
+#skills h1 {
+    color: #BB86FC;
+    margin-bottom: 20px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill p {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.skill-bar {
+    background-color: #333333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    background: linear-gradient(to right, #FFFFFF, #888888);
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    width: 0;
+    animation: loadSkill 2s forwards;
+}
+
+/* Animation pour les barres de compétence */
+@keyframes loadSkill {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-width);
+    }
 }
