@@ -261,3 +261,41 @@ button[type="submit"]:hover {
         width: var(--skill-width);
     }
 }
+
+/* Styles pour la section CV */
+#cv h1 {
+    color: #BB86FC;
+    margin-bottom: 20px;
+}
+
+.CV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cv-image {
+    border-radius: 10px; /* Arrondir les bords de l'image */
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajouter une ombre pour un effet 3D */
+}
+
+.download-cv {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-cv a {
+    background-color: #BB86FC;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-cv a:hover {
+    background-color: #9A67EA;
+}
