@@ -167,48 +167,6 @@ p {
     line-height: 1.4;
 }
 
-
-/* Formulaire de contact */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #333333;
-    color: #FFFFFF;
-}
-
-button[type="submit"] {
-    padding: 15px;
-    background-color: #BB86FC;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    color: #FFFFFF;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #9B6FCB;
-}
-
 /* Styles pour la section "about" */
 #about h1 {
     color: #BB86FC;
@@ -298,4 +256,23 @@ button[type="submit"]:hover {
 
 .download-cv a:hover {
     background-color: #9A67EA;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+#LinkSC {
+    color: #FFFFFF;
 }
