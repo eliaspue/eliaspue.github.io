@@ -200,6 +200,7 @@ p {
     background-color: #333333;
     border-radius: 5px;
     overflow: hidden;
+    width: 50%;
 }
 
 .skill-level {
