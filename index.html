@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Accueil</title>
+    <title>Portfolio - Esteban Elias Pueyo</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/jpeg" href="images/Favicon.png">
 </head>
 <body>
+<canvas id="space-canvas" aria-hidden="true"></canvas>
 <div class="container">
     <nav class="sidebar">
         <div class="logo">
@@ -15,9 +16,10 @@
         </div>
 
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="projets-professionnels.html">Projets Professionnels</a></li>
-            <li><a href="projets-academiques.html">Projets Académiques</a></li>
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projets-academiques">Projets Académiques</a></li>
+          <li><a href="#projets-professionnels">Projets Professionnels</a></li>
         </ul>
         <div class="social-icons">
             <a href="mailto:esteban.elias.2811@gmail.com"><img src="images/mail.png" alt="Mail"></a>
@@ -26,85 +28,222 @@
         </div>
     </nav>
     <main>
-        <section id="about">
-            <h1>Mon Histoire</h1>
-            <p>Bonjour, je m'appelle Esteban ELIAS PUEYO, et je suis un jeune développeur web passionné, âgé de 19 ans.
-                Actuellement, je viens de terminer ma troisième année de Bachelor Universitaire de Technologie (BUT) en informatique.
-                J'ai acquis au cours de mes trois années d'études une expertise approfondie dans les langages de programmation Web tels que PHP,HTML/CSS, Javascript, Symfony, Angular mais également dans les langages de programmation logiciels comme Java, Android Studio, C++.
-                J'ai découvert ma passion pour la programmation à travers les jeux vidéos.
-            </p>
+        <section id="hero" class="hero-section">
+            <div class="hero-copy">
+                <p class="hero-eyebrow">Portfolio</p>
+                <h1>Esteban <span>ELIAS</span> PUEYO</h1>
+                <p>Développeur web spécialisé en expériences digitales modernes, applications et interfaces réactives.</p>
+                <a class="hero-cta" href="cv/Esteban_Elias_Pueyo_CV.pdf" download>Télécharger mon CV</a>
+            </div>
         </section>
-        <section id="skills">
-            <h1>Mes Compétences Web</h1>
-            <div class="skill">
-                <p>HTML/CSS</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 89%;"></div>
-                </div>
+        <div class="about-row">
+            <div class="about-column">
+        <section id="about" class="about-section">
+            <div class="about-card">
+                <h2>À propos</h2>
+                <p>Bonjour, je m'appelle Esteban Elias Pueyo, j'ai 21 ans et je suis développeur web passionné par la création d'applications et de sites web modernes. J'ai suivi une formation en informatique jusqu'en 2024, durant laquelle j'ai acquis de solides compétences en développement web avec PHP, HTML/CSS, JavaScript, Symfony et Angular. J'ai également travaillé avec des technologies de développement logiciel telles que Java, Android Studio et C++.</p>
+                <p>Ma passion pour la programmation est née grâce aux jeux vidéo, qui m'ont donné envie de comprendre comment les logiciels sont conçus et fonctionnent. Depuis, je développe régulièrement des projets personnels et professionnels afin d'améliorer mes compétences techniques et de découvrir de nouvelles technologies. À travers ce portfolio, je vous invite à découvrir mon parcours, mes réalisations et les compétences que j'ai développées au fil de mon expérience.</p>
             </div>
-            <div class="skill">
-                <p>Angular</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 77%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <p>Symfony</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 70%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <p>Java</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 74%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <p>JavaScript</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 68%;"></div>
-                </div>
-            </div>
-
-            <h1>Mes Compétences Logiciels</h1>
-            <div class="skill">
-                <p>GitHub</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 70%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <p>Android Studio</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 60%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <p>JetBrains</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 70%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <p>VsCode</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 70%;"></div>
-                </div>
-            </div>
-
-
         </section>
-        <section id="cv">
-            <h1>Mon CV</h1>
-            <div class="CV">
-                <img src="images/ESTEBAN_ELIAS_PUEYO_CV.png" alt="CV" class="cv-image">
+        <section id="timeline" class="timeline-section">
+            <div class="timeline-card">
+                <h2>Mon parcours</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">2021-2024</span>
+                        <p>BUT Informatique, Conception et Développement d'applications</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">Avr. - Juin 2024</span>
+                        <p>Stage Développeur LIG</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">Avr. - Juin 2023</span>
+                        <p>Stage Développeur Winux</p>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="download-cv">
-                <a href="cv/ESTEBAN_ELIAS_PUEYO_CV.pdf" download="ESTEBAN_ELIAS_PUEYO_CV.pdf">Télécharger mon CV</a>
+        </section>
+            </div>
+        <section id="skills" class="skills-section">
+            <h1>Mes Compétences</h1>
+            <div class="skills-group">
+                <h2>Langages</h2>
+                <div class="badge-list">
+                    <span class="skill-badge">HTML/CSS</span>
+                    <span class="skill-badge">Angular</span>
+                    <span class="skill-badge">Symfony</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">PHP</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">C++</span>
+                    <span class="skill-badge">Java</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <h2>Logiciels</h2>
+                <div class="badge-list">
+                    <span class="skill-badge">Git</span>
+                    <span class="skill-badge">Docker</span>
+                    <span class="skill-badge">Figma</span>
+                    <span class="skill-badge">Linux</span>
+                    <span class="skill-badge">GitHub</span>
+                    <span class="skill-badge">Android Studio</span>
+                    <span class="skill-badge">JetBrains</span>
+                    <span class="skill-badge">VsCode</span>
+                </div>
+            </div>
+        </section>
+        </div>
+        <section id="projets-academiques">
+            <h1>Mes Projets Académiques</h1>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/SpaceCharity.png" alt="Projet Académique 1">
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h2>Space Charity</h2>
+                                <ul>
+                                    <li>PHP</li>
+                                    <li>NodeJS</li>
+                                    <li>JavaScript</li>
+                                    <li>MySQL</li>
+
+
+                                </ul>
+                                <p>Space Charity est un projet d'enchère de planètes (de manière virtuelle).</p>
+                                <p>Le but de ce projet était de faire un site web sous PHP tout en incluant des éléments de vente aux enchères en B To C uniquement.</p>
+                                <p>Notre concept est le suivant :</p>
+                                <p>Une vente aux enchères disponible plusieurs fois par an, le temps de quelques jours. </p>
+                                <p>Pendant l’évènement, les astres sont regroupés par lots, appelés vagues. Chaque vague à une durée déterminée, souvent de quelques heures, durant lesquelles les utilisateurs peuvent enchérir sur les différents astres.</p>
+                                <p>Entre deux évènements, le propriétaire d’une planète reste le même, et peut donner un surnom à sa planète.</p>
+                                <p>Les recettes des enchères seraient reversées à des associations comme WWF.</p>
+                            </div>
+                            <button class="expand-btn">Lire</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/APIWebsite.png" alt="Projet Académique 2">
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h2>Projet API de recherches d'articles de News</h2>
+                                <ul>
+                                    <li>HTML/CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>API utilisée NewsData.io</li>
+                                </ul>
+                                <p>Le but de ce projet était de faire un mini site web utilisant une API parmi une sélection d'API disponibles sur divers thèmes comme les jeux ou la culture. Nous étions deux à travailler sur ce projet et nous avons décidé de le faire avec l'API NewsData.io.</p>
+                                <p>Sur ce site, il est possible de faire des recherches d'articles de nouvelles récentes ou non à partir de mots-clés. Il y a quelques fonctionnalités en plus, comme la possibilité de retirer des mots-clés de la recherche ou choisir la langue des articles. Il est également possible de mettre des recherches en favoris en gardant les filtres de cette recherche.</p>
+                                <p>Ce projet nous a permis de développer nos compétences en développement web, en intégration d'API et en travail d'équipe.</p>
+                            </div>
+                            <button class="expand-btn">Lire</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/GameJam1.png" alt="Projet Académique 3">
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h2>Robot Gravity</h2>
+                                <ul>
+                                    <li>Python</li>
+                                </ul>
+                                <p>La Game Jam est un évènement avec pour thème principal les jeux vidéos où les participants, groupés en équipes, doivent créer un jeu dans un temps très limité, généralement quelques jours. J'ai eu l'occasion de faire 4 jours de Game Jam avec 3 camarades sur les deux thèmes : Robot et Gravité.</p>
+                                <p>Nous devions donc faire un jeu en utilisant le langage Python et sa librairie Pygame permettant de faire des jeux 2D basiques mais rapides à faire. Nous devions faire attention à la qualité du code en plus de fournir un jeu le plus original possible.</p>
+                            </div>
+                            <button class="expand-btn">Lire</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/GADI.png" alt="Projet Académique 4">
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h2>GADI</h2>
+                                <ul>
+                                    <li>Angular</li>
+                                    <li>Symfony</li>
+                                    <li>PostgreSQL</li>
+                                </ul>
+                                <p>Le but de ce projet était de refaire entièrement un site utilisé par les professeurs du BUT informatique, nommé GADI. En effet, ce dernier, créé il y a plus de 10 ans, était devenu obsolète et mal conçu pour gérer certains cas, notamment avec l'arrivée de la réforme des BUT. GADI permet de nombreuses fonctionnalités, telles que la gestion des budgets des professeurs ainsi que la planification des ressources et des Situations d'Apprentissage et d'Évaluation (SAE).</p>
+                            </div>
+                            <button class="expand-btn">Lire</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projets-professionnels">
+            <h1>Mes Projets Professionnels</h1>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/AugCom.png" alt="Projet 1">
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h2>AugCom</h2>
+                                <ul>
+                                    <li>Angular CLI</li>
+                                    <li>Node JS</li>
+                                </ul>
+                                <p>AugCom est une application innovante conçue pour faciliter la communication des personnes en situation de handicap cognitif. En utilisant des grilles de communication qui combinent pictogrammes et mots, l'application permet à ces individus de s'exprimer plus facilement. Les utilisateurs peuvent sélectionner les mots et pictogrammes sur la grille, et AugCom les prononce à haute voix, permettant ainsi aux personnes autour d'eux de comprendre le message transmis.</p>
+                                <p>Ce type d'outil est particulièrement utile pour les personnes ayant des troubles de la parole ou des difficultés à s'exprimer verbalement. En offrant une méthode alternative et augmentative de communication (AAC), AugCom contribue à améliorer l'inclusion sociale et la qualité de vie des utilisateurs en leur donnant une voix et en facilitant leurs interactions quotidiennes.</p>
+                                <p>Mon travail dans ce projet était de développer et d'améliorer des fonctionnalités. J'ai notamment refait le guide de l'application, développé un export des grilles vers Word et rajouté de nouveaux types de boutons pour les grilles.</p>
+                            </div>
+                            <button class="expand-btn">Lire</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/CampingUhaitza.jpg" alt="Projet 2">
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h2>Camping Uhaitza</h2>
+                                <ul>
+                                    <li>Android Studio</li>
+                                </ul>
+                                <p>J'ai développé une application pour le camping Uhaitza, cette application est née d'un besoin exprimé par les campeurs ayant du mal à trouver des activités à faire proche du camping. Cette application est développée sous Android Studio.</p>
+                                <p>Cette application répertorie les activités à faire à proximité du Camping Uhaitza et sont catégorisées parmi plusieurs critères comme leur prix, leur distance, l'âge minimum ou encore si l'activité est faisable par temps de pluie.</p>
+                                <p>Cependant cette application est encore en développement.</p>
+                            </div>
+                            <button class="expand-btn">Lire</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+</div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p>© 2025 Esteban Elias Pueyo</p>
+    </div>
+</footer>
+<div id="card-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+        <button class="modal-close" aria-label="Fermer">✕</button>
+        <div class="modal-body"></div>
+    </div>
 </div>
 <script src="scripts.js"></script>
 </body>
